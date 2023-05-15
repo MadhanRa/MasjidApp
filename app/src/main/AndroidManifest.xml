@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MasjidApp"
+        tools:targetApi="31">
+        <activity
+            android:name=".pages.kegiatanMasjid.FormKegMasjidActivity"
+            android:exported="false" />
+        <activity
+            android:name=".pages.kegiatanMasjid.KegiatanMasjidActivity"
+            android:exported="false"
+            android:label="@string/title_activity_kegiatan_masjid"
+            android:theme="@style/Theme.MasjidApp.DataJamaah" />
+        <activity
+            android:name=".pages.dataJamaah.FormDataJamaahActivity"
+            android:exported="false" />
+        <activity
+            android:name=".pages.dataJamaah.DataJamaahActivity"
+            android:exported="false"
+            android:label="@string/title_activity_data_jamaah"
+            android:theme="@style/Theme.MasjidApp.DataJamaah" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

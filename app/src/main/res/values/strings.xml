@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">MasjidApp</string>
+    <string name="iv_masjid_content_desc">Icon Masjid</string>
+    <string name="tv_tgl_main_menu">6 Mei 2023</string>
+    <string name="btn_data_jamaah">Data Jamaah</string>
+    <string name="btn_kegiatan_masjid">Kegiatan Masjid</string>
+    <string name="btn_kas_masjid">Kas Masjid</string>
+    <string name="tv_umur">%1$s Tahun</string>
+    <string name="tv_kategori">Kategori</string>
+    <string name="desc_fab_tambah_jamaah">Tambah Jamaah</string>
+    <string name="label_et_nama">Nama Jamaah</string>
+    <string name="label_et_nip">NIP</string>
+    <string name="label_et_kontak">Kontak</string>
+    <string name="label_et_alamat">Alamat</string>
+    <string name="tv_tanggalLahir">TanggalLahir</string>
+    <string name="btn_submit">Submit</string>
+    <string name="delete">Delete</string>
+    <string name="tv_jenKelamin">Jenis Kelamin</string>
+    <string name="lakiLaki">Laki-laki</string>
+    <string name="perempuan">Perempuan</string>
+    <string name="title_search_menu">Cari</string>
+    <string name="title_activity_data_jamaah">Data Jamaah</string>
+    <string name="chip_filter_warga_lokal">Warga Lokal</string>
+    <string name="chip_filter_pengurus">Pengurus</string>
+    <string name="chip_filter_tamu">Tamu</string>
+
+    <string-array name="kategori_jamaah">
+        <item>Warga Lokal</item>
+        <item>Pengurus</item>
+        <item>Tamu</item>
+    </string-array>
+
+    <string name="label_et_nama_keg">Nama Kegiatan</string>
+    <string name="label_et_penanggung_jwb">Penanggung Jawab</string>
+    <string name="label_et_deskripsi">Deskripsi</string>
+    <string name="tv_tanggalKeg">Tanggal Kegiatan</string>
+    <string name="tv_jenKeg">Jenis Kegiatan</string>
+    <string name="chip_filter_umum">Umum</string>
+    <string name="chip_filter_tertutup">Tertutup</string>
+    <string name="title_activity_kegiatan_masjid">Kegiatan Masjid</string>
+
+    <string-array name="jenis_kegiatan">
+        <item>Umum</item>
+        <item>Pengurus</item>
+        <item>Tertutup</item>
+    </string-array>
+
+</resources>
