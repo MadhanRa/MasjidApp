@@ -5,6 +5,7 @@ import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import id.madhanra.masjidapp.db.DatabaseContract.JamaahColumns
 import id.madhanra.masjidapp.db.DatabaseContract.KegMasjidColumns
+import id.madhanra.masjidapp.db.DatabaseContract.KasMasjidColumns
 
 class DatabaseHelper (context: Context) :
     SQLiteOpenHelper (context, DATABASE_NAME, null, DATABASE_VERSION) {
@@ -12,11 +13,13 @@ class DatabaseHelper (context: Context) :
     override fun onCreate(db: SQLiteDatabase?) {
         db?.execSQL(SQL_CREATE_TABLE_JAMAAH)
         db?.execSQL(SQL_CREATE_TABLE_KEGMASJID)
+        db?.execSQL(SQL_CREATE_TABLE_KASMASJID)
     }
 
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
         db?.execSQL("DROP TABLE IF EXISTS ${JamaahColumns.TABLE_NAME}")
         db?.execSQL("DROP TABLE IF EXISTS ${KegMasjidColumns.TABLE_NAME}")
+        db?.execSQL("DROP TABLE IF EXISTS ${KasMasjidColumns.TABLE_NAME}")
         onCreate(db)
     }
 
@@ -43,5 +46,14 @@ class DatabaseHelper (context: Context) :
                 " ${KegMasjidColumns.DESKRIPSI} TEXT NOT NULL," +
                 " ${KegMasjidColumns.PENANGGUNGJWBKEG} TEXT NOT NULL," +
                 " ${KegMasjidColumns.JENISKEG} TEXT NOT NULL)"
+
+        private const val SQL_CREATE_TABLE_KASMASJID =
+            "CREATE TABLE ${KasMasjidColumns.TABLE_NAME}" +
+                    " (${KasMasjidColumns._ID} INTEGER PRIMARY KEY AUTOINCREMENT," +
+                    " ${KasMasjidColumns.KETERANGAN} TEXT NOT NULL," +
+                    " ${KasMasjidColumns.NOMINAL} TEXT NOT NULL," +
+                    " ${KasMasjidColumns.KATEGORI} TEXT NOT NULL," +
+                    " ${KasMasjidColumns.JENIS} TEXT NOT NULL," +
+                    " ${KasMasjidColumns.TGLINPUT} TEXT NOT NULL)"
     }
 }

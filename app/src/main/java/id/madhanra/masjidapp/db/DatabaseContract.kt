@@ -29,4 +29,16 @@ class DatabaseContract {
             const val JENISKEG = "jenisKegiatan"
         }
     }
+
+    internal class KasMasjidColumns : BaseColumns {
+        companion object {
+            const val TABLE_NAME = "kasMasjid"
+            const val _ID = "_id"
+            const val KETERANGAN = "keterangan"
+            const val NOMINAL = "nominal"
+            const val KATEGORI = "keterangan"
+            const val JENIS = "jenis"
+            const val TGLINPUT = "tglInput"
+        }
+    }
 }

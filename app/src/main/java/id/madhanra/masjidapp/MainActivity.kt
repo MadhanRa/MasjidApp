@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import id.madhanra.masjidapp.pages.dataJamaah.DataJamaahActivity
 import id.madhanra.masjidapp.databinding.ActivityMainBinding
+import id.madhanra.masjidapp.pages.kasMasjid.KasMasjidActivity
 import id.madhanra.masjidapp.pages.kegiatanMasjid.KegiatanMasjidActivity
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
@@ -19,6 +20,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
         binding.btnDataJamaah.setOnClickListener(this)
         binding.btnKegiatanMasjid.setOnClickListener(this)
+        binding.btnKasMasjid.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -31,6 +33,12 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 val intent = Intent(
                     this@MainActivity,
                     KegiatanMasjidActivity::class.java)
+                startActivity(intent)
+            }
+            R.id.btn_kas_masjid -> {
+                val intent = Intent(
+                    this@MainActivity,
+                    KasMasjidActivity::class.java)
                 startActivity(intent)
             }
         }

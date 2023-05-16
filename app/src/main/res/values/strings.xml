@@ -45,4 +45,26 @@
         <item>Tertutup</item>
     </string-array>
 
+
+
+    <string name="tv_nominal">Rp %1$s</string>
+    <string name="label_et_keterangan">Keterangan</string>
+    <string name="label_et_nominal">Nominal</string>
+    <string name="tv_kategori_kas">Kategori</string>
+    <string name="tv_jenis_kas">Jenis</string>
+    <string name="tv_tgl_input">Tanggal</string>
+    <string name="rb_masuk">Pemasukan</string>
+    <string name="rb_keluar">Pengeluaran</string>
+
+    <string-array name="jenis_kas_masuk">
+        <item>Infaq</item>
+        <item>Zakat</item>
+        <item>Hadiah</item>
+    </string-array>
+
+    <string-array name="jenis_kas_keluar">
+        <item>Rutinan</item>
+        <item>Kondisional</item>
+    </string-array>
+
 </resources>

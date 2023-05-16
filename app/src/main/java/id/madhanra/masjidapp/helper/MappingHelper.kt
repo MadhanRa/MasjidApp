@@ -3,7 +3,9 @@ package id.madhanra.masjidapp.helper
 import android.database.Cursor
 import id.madhanra.masjidapp.db.DatabaseContract.JamaahColumns
 import id.madhanra.masjidapp.db.DatabaseContract.KegMasjidColumns
+import id.madhanra.masjidapp.db.DatabaseContract.KasMasjidColumns
 import id.madhanra.masjidapp.model.Jamaah
+import id.madhanra.masjidapp.model.Kas
 import id.madhanra.masjidapp.model.Kegiatan
 
 object MappingHelper {
@@ -41,5 +43,26 @@ object MappingHelper {
             }
         }
         return kegiatanList
+    }
+
+    fun mapCursorToArrayListKasMasjid(kasMasjidCursor: Cursor?): ArrayList<Kas> {
+        val kasList = ArrayList<Kas>()
+        kasMasjidCursor?.apply {
+            while (moveToNext()) {
+                val id = getInt(getColumnIndexOrThrow(KasMasjidColumns._ID))
+                val keterangan =
+                    getString(getColumnIndexOrThrow(KasMasjidColumns.KETERANGAN))
+                val nominal =
+                    getString(getColumnIndexOrThrow(KasMasjidColumns.NOMINAL))
+                val kategori =
+                    getString(getColumnIndexOrThrow(KasMasjidColumns.KATEGORI))
+                val jenis =
+                    getString(getColumnIndexOrThrow(KasMasjidColumns.JENIS))
+                val tglInput =
+                    getString(getColumnIndexOrThrow(KasMasjidColumns.TGLINPUT))
+                kasList.add(Kas(id, keterangan, nominal, kategori, jenis, tglInput))
+            }
+        }
+        return kasList
     }
 }
